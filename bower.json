@@ -12,7 +12,9 @@
     "purescript-prelude": "^2.1.0",
     "purescript-console": "^2.0.0",
     "purescript-options": "^2.0.0",
-    "purescript-eff-functions": "^2.0.0"
+    "purescript-eff-functions": "^2.0.0",
+    "purescript-aff-promise": "^0.4.0",
+    "purescript-generics-rep": "^4.1.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^2.0.0"
