@@ -6,12 +6,14 @@ module Rollup
   , Bundle
   , SourceMap
   , Plugin
+  , Format(..)
   , ROLLUP
+  , rollup
   , plugins
   , cache
-  , rollup
   , generate
   , write
+  , format
   ) where
 
 import Prelude
