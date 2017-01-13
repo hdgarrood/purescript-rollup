@@ -4,3 +4,4 @@
 /output/
 /.psc*
 /.psa*
+/test-output/*.js

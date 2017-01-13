@@ -12,7 +12,7 @@ import Node.Process as Process
 main :: Eff _ Unit
 main = void $ runAff die (const (pure unit)) do
   bundle <- Rollup.rollup "./example/entry.js" mempty
-  Rollup.write bundle "./output/test-bundle.js"
+  Rollup.write bundle "./test-output/test-bundle.js"
     (  Rollup.format := Rollup.UMD
     <> Rollup.moduleName := "TestMain"
     )
