@@ -15,6 +15,8 @@ module Rollup
   , write
   , format
   , moduleName
+  , parseFormat
+  , formatToString
   ) where
 
 import Prelude
@@ -27,6 +29,7 @@ import Data.Function.Eff (EffFn1, EffFn2, runEffFn1, runEffFn2)
 import Data.Function.Uncurried (Fn2)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
+import Data.Maybe (Maybe(..))
 import Data.Op (Op(..))
 import Data.Options (Option, Options, opt, options, (:=))
 import Unsafe.Coerce (unsafeCoerce)
@@ -84,6 +87,16 @@ formatToString = case _ of
   ES -> "es"
   IIFE -> "iife"
   UMD -> "umd"
+
+-- | Parse a Format from a String.
+parseFormat :: String -> Maybe Format
+parseFormat = case _ of
+  "amd" -> Just AMD
+  "cjs" -> Just CJS
+  "es" -> Just ES
+  "iife" -> Just IIFE
+  "umd" -> Just UMD
+  _ -> Nothing
 
 -- | The type of module to produce.
 format :: Option GenerateOpts Format
