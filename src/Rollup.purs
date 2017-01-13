@@ -14,6 +14,7 @@ module Rollup
   , generate
   , write
   , format
+  , moduleName
   ) where
 
 import Prelude
