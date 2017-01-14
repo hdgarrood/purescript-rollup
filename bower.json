@@ -1,6 +1,7 @@
 {
   "name": "purescript-rollup",
   "author": "Harry Garrood <harry@garrood.me>",
+  "description": "Bindings to Rollup's JavaScript API.",
   "license": "MIT",
   "ignore": [
     "**/.*",

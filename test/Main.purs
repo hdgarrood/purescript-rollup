@@ -26,6 +26,7 @@ testNoPlugins = do
 purs =
   Purs.plugin (  Purs.outputDir := "./example/purescript"
               <> Purs.runMain := true
+              <> Purs.uncurry := false
               )
 
 nodeResolve =
