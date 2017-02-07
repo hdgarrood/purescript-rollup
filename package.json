@@ -3,6 +3,6 @@
   "dependencies": {
     "rollup": "^0.41.3",
     "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-purs": "^1.0.8"
+    "rollup-plugin-purs": "^1.0.17"
   }
 }

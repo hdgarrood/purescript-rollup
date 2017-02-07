@@ -26,15 +26,11 @@ testNoPlugins = do
 purs =
   Purs.plugin (  Purs.outputDir := "./example/purescript"
               <> Purs.runMain := true
-              <> Purs.uncurry := false
               )
 
-nodeResolve =
-  NodeResolve.plugin unit
-
 testPureScript = do
-  bundle <- Rollup.rollup "./example/purescript/Main/index.js"
-              (Rollup.plugins := [purs, nodeResolve])
+  bundle <- Rollup.rollup "./output/Test.Main/index.js"
+              (Rollup.plugins := [purs])
   Rollup.write bundle "./test-output/purescript.js"
     (  Rollup.format := Rollup.IIFE
     <> Rollup.moduleName := "PS"
